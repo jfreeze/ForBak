@@ -1,4 +1,4 @@
-defmodule ForBakWeb.LiveView.Registration.Show do
+defmodule ForbakWeb.LiveView.Registration.Show do
   use Phoenix.LiveView
   alias ForbakWeb.RegistrationView
 

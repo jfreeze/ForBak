@@ -18,7 +18,7 @@ defmodule ForbakWeb.Router do
     plug :put_layout, {ForbakWeb.LayoutView, :app}
   end
 
-  scope "/", ForBakWeb.LiveView do
+  scope "/", ForbakWeb.LiveView do
     pipe_through [:browser, :layout]
 
     live "/registrations/new", Registration.New
