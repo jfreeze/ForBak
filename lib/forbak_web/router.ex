@@ -14,6 +14,17 @@ defmodule ForbakWeb.Router do
     plug :accepts, ["json"]
   end
 
+  pipeline :layout do
+    plug :put_layout, {ForbakWeb.LayoutView, :app}
+  end
+
+  scope "/", ForBakWeb.LiveView do
+    pipe_through [:browser, :layout]
+
+    live "/registrations/new", Registration.New
+    live "/registrations/show", Registration.Show
+  end
+
   scope "/", ForbakWeb do
     pipe_through :browser
 

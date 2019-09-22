@@ -23,7 +23,7 @@ defmodule ForbakWeb do
 
       import Plug.Conn
       import ForbakWeb.Gettext
-      import Phoenix.LiveView.Controller
+      import Phoenix.LiveView.Controller, only: [live_render: 3]
 
       alias ForbakWeb.Router.Helpers, as: Routes
     end
