@@ -1,6 +1,8 @@
 New Page
 
 <%= f = form_for :test, "#", [phx_change: :validate, phx_submit: :register, as: "user"] %>
+<%= live_link "Go to Show Page", to: Routes.live_path(@socket, ForbakWeb.LiveView.Registration.Show) %>
+<br>
 <button phx-disable-with="working..." type="submit">Register</button>
 
 </form>
